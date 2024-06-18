@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Información Personal</title>
+    <link id="stylesheet" rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Formulario de Información Personal</h1>
+    <form id="forminfo">
+        <div class="formclass">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+        </div>
+        <div class="formclass">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido">
+        </div>
+        <div class="formclass">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <span id="emailError" class="error-message"></span>
+        </div>
+        <div class="formclass">
+            <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento">
+        </div>
+        <div class="formclass">
+            <label for="pais">País de residencia:</label>
+            <input type="text" id="pais" name="pais">
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+    <button onclick="toggleContrast()">Cambiar a Alto Contraste</button>
+    <script>
+        function toggleContrast() {
+            var link = document.getElementById('stylesheet');
+            if (link.getAttribute('href') === 'style.css') {
+                link.setAttribute('href', 'altocontraste.css');
+            } else {
+                link.setAttribute('href', 'style.css');
+            }
+        }
+    </script>
+     <script src="validacion.js"></script>
+
+</body>
+</html>
